@@ -39,10 +39,10 @@ class TestUserAddToBasketFromProductPage:
 
 
 @pytest.mark.need_review
-@pytest.mark.parametrize('suffix', [pytest.param(num, marks=pytest.mark.xfail) if num == 7
-                                    else num for num in range(10)])
-def test_guest_can_add_product_to_basket(browser, suffix):
-    link_promo = f"http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer{suffix}"
+# @pytest.mark.parametrize('suffix', [pytest.param(num, marks=pytest.mark.xfail) if num == 7
+#                                   else num for num in range(10)])
+def test_guest_can_add_product_to_basket(browser):
+    link_promo = f"http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer5"
     page = ProductPage(browser, link_promo)
     page.open()
     page.add_protuct_to_backet()
