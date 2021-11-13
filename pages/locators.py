@@ -11,9 +11,9 @@ class BasePageLocators:
 class LoginPageLocators:
     LOGIN_LINK = (By.ID, "login_form")
     REGISTER_LINK = (By.ID, "register_form")
-    EMAIL = (By.ID, "id_registration-email")
-    PASSWORD = (By.ID, "id_registration-password1")
-    PASSWORD_CONFIRM = (By.ID, "id_registration-password2")
+    REGISTER_EMAIL = (By.ID, "id_registration-email")
+    REGISTER_PASSWORD1 = (By.ID, "id_registration-password1")
+    REGISTER_PASSWORD2 = (By.ID, "id_registration-password2")
     REGISTER_BTN = (By.CSS_SELECTOR, "#register_form > button")
 
 

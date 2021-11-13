@@ -1,5 +1,5 @@
-from pages.base_page import BasePage
-from pages.locators import ProductPageLocators
+from .base_page import BasePage
+from .locators import ProductPageLocators
 
 
 class ProductPage(BasePage):
@@ -13,7 +13,9 @@ class ProductPage(BasePage):
 
         btn = self.browser.find_element(*ProductPageLocators.BTN_ADD_TO_BASKET)
         btn.click()
-        # self.solve_quiz_and_get_code()
+
+        if '?promo=' in self.url:
+            self.solve_quiz_and_get_code()
 
         self.should_be_success()
         self.check_success_message()
